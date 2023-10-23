@@ -1,4 +1,5 @@
-//+build js
+//go:build js
+// +build js
 
 package peer
 
@@ -205,7 +206,7 @@ func NewRTCPeerConnection() (RTCPeerConnection, error) {
 	obj := js.Global().Get("RTCPeerConnection").New(M{
 		"iceServers": S{
 			M{
-				"urls": "stun:stun.l.google.com:19302",
+				"urls": "stun:iphone-stun.strato-iphone.de:3478",
 			},
 		},
 	})

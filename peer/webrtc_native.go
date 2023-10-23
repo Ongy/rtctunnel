@@ -1,4 +1,5 @@
-//+build !js
+//go:build !js
+// +build !js
 
 package peer
 
@@ -128,11 +129,7 @@ func NewRTCPeerConnection() (RTCPeerConnection, error) {
 	pc, err := webrtc.NewPeerConnection(webrtc.Configuration{
 		ICEServers: []webrtc.ICEServer{{
 			URLs: []string{
-				"stun:stun.l.google.com:19302",
-				"stun:stun1.l.google.com:19302",
-				"stun:stun2.l.google.com:19302",
-				"stun:stun3.l.google.com:19302",
-				"stun:stun4.l.google.com:19302",
+				"stun:iphone-stun.strato-iphone.de:3478",
 			},
 		}},
 	})
